@@ -8,48 +8,30 @@ namespace Banking_System
 {
     class Account
     {
-            //FIELDS
-        private decimal currentBalance = 100.00M;
+        //FIELDS
+        private decimal currentBalance = 100.00M;       //Stores Clients Current Balance
         private List<string> transactions = new List<string>();
 
-        
-
-
-
        
-
-
-
         //PROPERTIES
 
-        public decimal CurrentBalance
+        public decimal CurrentBalance   
         {
             get { return currentBalance; }
             set { currentBalance = value; }
         } 
 
-        public List<string> Transactions
+        public List<string> Transactions //Stores Client Transaction History in a List
         {
             get { return transactions; }
             set { transactions = value; }
         }
 
 
-        //CONSTRUCT 
-        public Account()
-        {           
-        }
-
-        public Account(decimal balance)
-        {
-            this.CurrentBalance = balance;
-        }
-
-
-
-
+       
         //Methods
-        //WITHDRAW
+
+        //WITHDRAW METHOD
         public void Withdraw(decimal amountToWithdraw)
         {
             CurrentBalance = CurrentBalance - amountToWithdraw;
@@ -58,7 +40,7 @@ namespace Banking_System
             this.Transactions.Add(time + "\t - " + amountToWithdraw +" \t\t$" + CurrentBalance);
             
         }
-        //DEPOSIT
+        //DEPOSIT METHOD
         public void Deposit(decimal depositAmount)
         {
             CurrentBalance = CurrentBalance + depositAmount;
@@ -68,8 +50,19 @@ namespace Banking_System
             
         }
 
-       
+        //CONSTRUCT 
+        public Account()
+        {
+        }
+
+        public Account(decimal balance)
+        {
+            this.CurrentBalance = balance;
+        }
+
+
+
     }
-    
-    
+
+
 }

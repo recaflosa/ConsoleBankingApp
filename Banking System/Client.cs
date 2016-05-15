@@ -8,7 +8,8 @@ namespace Banking_System
 {
     class Client
     {   //fields
-        private string accountName = "Scott V Ladan";
+        private string accountName;
+        private string phoneNumber;
         private int accountNumber;
 
         //properties
@@ -19,6 +20,11 @@ namespace Banking_System
             set { this.accountName = value; }
         }
 
+        public string PhoneNumber
+        {
+            get { return this.phoneNumber; }
+            set { this.phoneNumber = value; }
+        }
 
         
         public int AccountNumber
@@ -41,10 +47,8 @@ namespace Banking_System
 
         public Client()
         {
-           /* this.AccountNumber = 50483;*/
-           //GenerateAccountNum();
-            //this.AccountName = accountName;
+
         }
-        
+
     }
 }
